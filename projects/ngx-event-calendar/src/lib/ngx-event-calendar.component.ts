@@ -25,7 +25,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
         ])
       ]
     )
-  
+
   ]
 
 })
@@ -53,7 +53,7 @@ export class NgxEventCalendarComponent implements OnInit {
   eventsData: any;
   actYear;
   showChangeDate = false;
-  btnAddShow:boolean;
+  btnAddShow: boolean;
 
   @Input() dataSource: EventData[];
   @Input() showAddButton: boolean;
@@ -143,9 +143,9 @@ export class NgxEventCalendarComponent implements OnInit {
         );
       });
 
-      //Sorted events by date
+      // Sorted events by date
       const arrSortedEventsByDate = filterEvents.sort((a:any, b:any) => {
-        return a.startDate - b.startDate
+        return a.startDate - b.startDate;
       });
 
       this.arrTest.push({
@@ -155,7 +155,7 @@ export class NgxEventCalendarComponent implements OnInit {
         events: arrSortedEventsByDate
       });
 
-      
+
 
     }
 
@@ -236,7 +236,7 @@ export class NgxEventCalendarComponent implements OnInit {
     this.currentMonth = Number(event.value);
 
     this.actDate = this.creatActMonthYear();
- 
+
 
     this.createCalendar();
   }
